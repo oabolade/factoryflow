@@ -1,0 +1,44 @@
+# FactoryFlow dependencies
+# Install with: pip install -r requirements.txt
+# For AMD ROCm torch, see: https://pytorch.org/get-started/locally/
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.0
+
+# Core ML
+# momentfm: latest on PyPI is 0.1.4 with hard pins (numpy==1.25.2, transformers==4.33.3)
+# that conflict with CrewAI/gradio. Install separately with --no-deps:
+#   pip install --no-deps momentfm==0.1.4
+transformers>=4.45.0
+# torch installed separately with ROCm wheels (see above)
+numpy>=1.26.0
+scikit-learn>=1.4.0          # for RUL linear regression
+
+# Agent framework
+crewai>=0.80.0
+crewai-tools>=0.14.0
+
+# MCP
+mcp>=1.0.0
+
+# LLM serving client
+openai>=1.40.0               # used by CrewAI to call vLLM endpoint
+httpx>=0.27.0
+
+# Procurement / scraping
+apify-client>=1.7.0
+
+# Data connector
+mindsdb-sdk>=2.0.0
+
+# Demo UI
+gradio>=4.40.0
+
+# Utilities
+python-dotenv>=1.0.0
+structlog>=24.1.0
+anyio>=4.4.0
+python-dateutil>=2.9.0
+pydantic>=2.7.0
+
+# Testing
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
