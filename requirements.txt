@@ -7,7 +7,10 @@
 # momentfm: latest on PyPI is 0.1.4 with hard pins (numpy==1.25.2, transformers==4.33.3)
 # that conflict with CrewAI/gradio. Install separately with --no-deps:
 #   pip install --no-deps momentfm==0.1.4
-transformers>=4.45.0
+# Cap below 4.50: newer transformers' integrations/moe.py uses string-quoted
+# annotations in torch.library.custom_op that the ROCm 6.0 torch wheel
+# (torch 2.2/2.3 era) can't resolve via infer_schema.
+transformers>=4.45.0,<4.50
 # torch installed separately with ROCm wheels (see above)
 numpy>=1.26.0
 scikit-learn>=1.4.0          # for RUL linear regression
