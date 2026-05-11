@@ -4,7 +4,7 @@
 > Update the Status column and Notes after completing each component.
 > Never delete rows — mark them DONE or BLOCKED.
 
-Last updated: 2026-05-09 — Checkpoint 6 (HF Space artifacts) scaffolded; ready to deploy
+Last updated: 2026-05-10 — Checkpoint 6 deployed to HF Spaces; awaiting build + OpenAI secret
 
 ---
 
@@ -32,7 +32,7 @@ Last updated: 2026-05-09 — Checkpoint 6 (HF Space artifacts) scaffolded; ready
 | Demo components | `src/demo/components.py` | DONE | DemoState dataclass, gauge formatter, supplier-card markdown builder |
 | Demo script | `src/demo/demo_script.md` | DONE | 3-min judge walkthrough + recovery cues |
 | Dockerfile | `Dockerfile` | DONE | python:3.12-slim, CPU torch, momentfm --no-deps, port 7860, DEMO_MODE=true |
-| HF Space | external | TODO | URL: (deploy + fill in) |
+| HF Space | external | DONE | URL: https://huggingface.co/spaces/oabolade23/factoryflow (build in progress; needs OPENAI_API_KEY secret) |
 | requirements.txt | `requirements.txt` | DONE | momentfm note added; install separately with --no-deps |
 | .env.example | `.env.example` | DONE | Mirrored from env.example at repo root |
 | README.md | `README.md` | DONE | HF Space frontmatter, talking points, AMD evidence section, smoke tests |
@@ -157,8 +157,8 @@ MINDSDB_FIXTURE = {
 
 ## Submission links (fill in as ready)
 
-- GitHub repo: ___________________
-- HF Space: ___________________
+- GitHub repo: https://github.com/oabolade/factoryflow
+- HF Space: https://huggingface.co/spaces/oabolade23/factoryflow
 - Demo video: ___________________
 - LabLab submission: ___________________
 - Pitch deck: ___________________
