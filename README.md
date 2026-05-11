@@ -17,6 +17,12 @@ End-to-end autonomous procurement with one human-in-the-loop step.
 
 Built for the **AMD x LabLab.ai Developer Hackathon** (May 2026).
 
+## Live demo
+
+- **AMD MI300X (DigitalOcean):** http://165.245.133.72:7860 — full pipeline running on AMD GPU
+- **Hugging Face Space (CPU mirror):** https://huggingface.co/spaces/oabolade23/factoryflow
+- **Source:** https://github.com/oabolade/factoryflow
+
 ---
 
 ## What it does

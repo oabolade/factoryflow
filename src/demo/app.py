@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 from typing import Any, Generator
 
 import gradio as gr
@@ -176,7 +177,14 @@ def build_app() -> gr.Blocks:
 
 def main() -> None:
     app = build_app()
-    app.queue().launch(server_name="0.0.0.0", server_port=7860, show_error=True)
+    share = os.getenv("GRADIO_SHARE", "false").lower() in ("1", "true", "yes")
+    port = int(os.getenv("GRADIO_PORT", "7860"))
+    app.queue().launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        share=share,
+        show_error=True,
+    )
 
 
 if __name__ == "__main__":
